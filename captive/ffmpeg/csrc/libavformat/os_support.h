@@ -66,6 +66,10 @@ typedef int socklen_t;
 #if !HAVE_POLL_H
 typedef unsigned long nfds_t;
 
+#if HAVE_WINSOCK2_H
+#include <winsock2.h>
+#endif
+
 struct pollfd {
     int fd;
     short events;  /* events to look for */

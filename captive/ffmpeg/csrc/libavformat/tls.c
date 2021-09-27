@@ -20,6 +20,9 @@
  */
 
 #include "avformat.h"
+#include "network.h"
+#include "os_support.h"
+#include "internal.h"
 #include "url.h"
 #include "libavutil/avstring.h"
 #if CONFIG_GNUTLS
@@ -47,9 +50,6 @@
             SSL_CTX_free(c->ctx); \
     } while (0)
 #endif
-#include "network.h"
-#include "os_support.h"
-#include "internal.h"
 #if HAVE_POLL_H
 #include <poll.h>
 #endif
