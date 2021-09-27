@@ -75,6 +75,10 @@
 #include <openssl/err.h>
 #include <openssl/opensslconf.h>
 
+#ifdef _WIN32
+#include <winerror.h>
+#endif
+
 #ifdef  __cplusplus
 extern "C" {
 #endif
