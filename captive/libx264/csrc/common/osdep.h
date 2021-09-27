@@ -35,11 +35,6 @@
 
 #include "config.h"
 
-#if !HAVE_LOG2F
-#define log2f(x) (logf(x)/0.693147180559945f)
-#define log2(x) (log(x)/0.693147180559945)
-#endif
-
 #ifdef _WIN32
 #include <io.h>    // _setmode()
 #include <fcntl.h> // _O_BINARY
@@ -58,6 +53,11 @@
 #include <mathimf.h>
 #else
 #include <math.h>
+#endif
+
+#if !HAVE_LOG2F
+#define log2f(x) (logf(x)/0.693147180559945f)
+#define log2(x) (log(x)/0.693147180559945)
 #endif
 
 #if (defined(__GNUC__) || defined(__INTEL_COMPILER)) && (ARCH_X86 || ARCH_X86_64)
