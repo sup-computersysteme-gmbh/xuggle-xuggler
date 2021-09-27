@@ -30,7 +30,9 @@ union max_align
 	void (*q)(void);
 };
 
-typedef union max_align max_align_t;
+#if !defined(__CLANG_MAX_ALIGN_T_DEFINED) && !defined(_GCC_MAX_ALIGN_T)
+    typedef union max_align max_align_t;
+#endif
 
 #endif
 
