@@ -20,8 +20,8 @@
 
 #include "avstring.h"
 #include "dict.h"
-#include "internal.h"
 #include "mem.h"
+#include "internal.h"
 
 AVDictionaryEntry *
 av_dict_get(AVDictionary *m, const char *key, const AVDictionaryEntry *prev, int flags)

@@ -24,8 +24,6 @@
  * RV30/40 decoder common data
  */
 
-#include "libavutil/internal.h"
-
 #include "avcodec.h"
 #include "dsputil.h"
 #include "mpegvideo.h"
@@ -34,6 +32,8 @@
 #include "mathops.h"
 #include "rectangle.h"
 #include "thread.h"
+
+#include "libavutil/internal.h"
 
 #include "rv34vlc.h"
 #include "rv34data.h"
